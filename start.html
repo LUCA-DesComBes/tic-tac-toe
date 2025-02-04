@@ -36,7 +36,7 @@
 			<div class="players-row">
 				<div class="players-div blue">
 					<p class="players-div-para">X (P2)</p>
-					<p class="score">0</p>
+					<p class="score" id="cross-score">0</p>
 				</div>
 				<div class="players-div gray">
 					<p class="players-div-para">TIES</p>
@@ -44,19 +44,19 @@
 				</div>
 				<div class="players-div orange">
 					<p class="players-div-para">O (P1)</p>
-					<p class="score">0</p>
+					<p class="score" id="circle-score">0</p>
 				</div>
 			</div>
 		</main>
 		<section class="round-sect" id="round-sect">
-			<p class="player-win">PLAYER 1 WINS!</p>
+			<p class="player-win" id="player-win"></p>
 			<div class="round-r">
 				<img src="" alt="circle-round" id="pion-round">
 				<h2 id="heading-two">TAKES THE ROUND</h2>
 			</div>
 			<div class="btns-round">
 				<button class="quit btn-truc">QUIT</button>
-				<button class="next-round btn-truc">NEXT ROUND</button>
+				<button class="next-round btn-truc" id="next-round">NEXT ROUND</button>
 			</div>
 		</section>
 		<script src="main.js"></script>
