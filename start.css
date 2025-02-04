@@ -137,10 +137,6 @@ img[alt="pion"] {
   position: absolute;
   top: 32%;
   width: 100%;
-  /* display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column; */
   z-index: 2;
   background-color: #1f3641;
   padding: 40px 47px 48px 48px;
@@ -197,6 +193,17 @@ h2 {
 img[alt="circle-round"] {
   height: 30px;
   width: 30px;
+}
+
+img[alt="cross-turn"],
+img[alt="circle-turn"] {
+  height: 16px;
+  width: 16px;
+}
+
+a {
+  text-decoration: none;
+  color: #1A2A33;
 }
 
 @media screen and (min-width: 376px) {
@@ -262,11 +269,6 @@ img[alt="circle-round"] {
     width: 64px;
   }
 
-  img[alt="cross-turn"],
-  img[alt="circle-turn"] {
-    height: 16px;
-    width: 16px;
-  }
 
   img[alt="cross"],
   img[alt="circle"] {

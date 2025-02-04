@@ -22,6 +22,9 @@ let gameActive = true;
 //On creer un nouveau tableau vide pour mettre les alt dedans
 let arrayPions = ["", "", "", "", "", "", "", "", ""];
 
+//On creer un compteur
+let counter = 0;
+
 //On creer un tableau pour mettre les coups gagnants du morpions
 const winningCombos = [
   [0, 1, 2],
@@ -80,13 +83,14 @@ for (let i = 0; i < btns.length; i++) {
 
       //On vide la grilles des images et des alt
       pions.src = "";
-      pions.alt = "";
+      arrayPions[index] = pions.alt = "";
       if (currentPlayer % 2 === 0) {
-        circleScore.textContent = 1;
+ 
       } else {
-        crossScore.textContent = 1;
+     
       }
     });
+
 
     //On appelle la fonction checkGameState
     checkGameState();
@@ -119,10 +123,14 @@ function checkGameState() {
         pionRound.src = "./assets/circle.svg";
         headingTwo.style.color = "#F2B137";
         playerWin.textContent = "PLAYER 1 WINS!";
+        counter++;
+        circleScore.textContent = counter;
       } else {
         pionRound.src = "./assets/cross.svg";
         headingTwo.style.color = "#31C3BD";
         playerWin.textContent = "PLAYER 2 WINS!";
+        counter++;
+        crossScore.textContent = counter;
       }
     }
   }
