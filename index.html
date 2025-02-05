@@ -15,19 +15,30 @@
 			<section class="choose-player">
 				<h1>PICK PLAYER 1’S MARK</h1>
 				<div class="choose-div">
-					<button class="choose-div-pion">
-						<img src="./assets/cross-choose.svg" alt="cross" />
+					<button class="choose-div-pion" id="choose-div-pion-cross">
+						<img
+							src="./assets/cross-choose.svg"
+							alt="cross"
+							id="cross-choose-active"
+						/>
 					</button>
-					<button class="choose-div-pion choose">
-						<img src="./assets/circle-choose.svg" alt="circle" />
+					<button class="choose-div-pion" id="choose-div-pion-circle">
+						<img
+							src="./assets/circle-choose.svg"
+							alt="circle"
+							id="circle-choose-active"
+						/>
 					</button>
 				</div>
-                <p class="remember">REMEMBER : X GOES FIRST</p>
+				<p class="remember">REMEMBER : X GOES FIRST</p>
 			</section>
-            <section class="second-sect">
-                <button class="cpu-btn">NEW GAME (VS CPU)</button>
-                <button class="player-btn">NEW GAME  (VS PLAYER)</button>
-            </section>
+			<section class="second-sect">
+				<button class="cpu-btn">NEW GAME (VS CPU)</button>
+				<a href="./start.html"
+					><button class="player-btn">NEW GAME (VS PLAYER)</button></a
+				>
+			</section>
 		</main>
+		<script src="./option.js"></script>
 	</body>
 </html>

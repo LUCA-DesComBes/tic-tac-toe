@@ -7,21 +7,53 @@
 		<link rel="stylesheet" href="./start.css" />
 	</head>
 	<body>
-		<!-- <div class="truc"></div> -->
+		<div class="truc" id="truc"></div>
 		<header>
 			<div class="f-r">
 				<img src="./assets/cross.svg" alt="cross" />
 				<img src="./assets/circle.svg" alt="circle" />
 			</div>
 			<div class="div-turn">
-				<img src="./assets/cross.svg" alt="cross-turn" />
+				<img src="./assets/cross.svg" alt="cross-turn" id="cross-turn" />
 				<p class="div-turn-para">TURN</p>
 			</div>
-			<button class="back-btn">
+			<button class="back-btn" id="back-btn">
 				<img src="./assets/Redo.svg" alt="redo" />
 			</button>
 		</header>
 		<main>
+			<div class="menu-game">
+				<div class="f-r">
+					<img src="./assets/cross.svg" alt="cross" />
+					<img src="./assets/circle.svg" alt="circle" />
+				</div>
+				<section class="choose-player">
+					<h1>PICK PLAYER 1’S MARK</h1>
+					<div class="choose-div">
+						<button class="choose-div-pion" id="choose-div-pion-cross">
+							<img
+								src="./assets/cross-choose.svg"
+								alt="cross"
+								id="cross-choose-active"
+							/>
+						</button>
+						<button class="choose-div-pion" id="choose-div-pion-circle">
+							<img
+								src="./assets/circle-choose.svg"
+								alt="circle"
+								id="circle-choose-active"
+							/>
+						</button>
+					</div>
+					<p class="remember">REMEMBER : X GOES FIRST</p>
+				</section>
+				<section class="second-sect">
+					<button class="cpu-btn">NEW GAME (VS CPU)</button>
+					<a href="./start.html"
+						><button class="player-btn">NEW GAME (VS PLAYER)</button></a
+					>
+				</section>
+			</div>
 			<div class="container">
 				<button class="btn-pion"><img src="" alt="" id="pion" /></button>
 				<button class="btn-pion"><img src="" alt="" id="pion" /></button>
@@ -36,29 +68,53 @@
 			<div class="players-row">
 				<div class="players-div blue">
 					<p class="players-div-para">X (P2)</p>
-					<p class="score">0</p>
+					<p class="score" id="cross-score">0</p>
 				</div>
 				<div class="players-div gray">
 					<p class="players-div-para">TIES</p>
-					<p class="range">0</p>
+					<p class="range" id="score-tied">0</p>
 				</div>
 				<div class="players-div orange">
 					<p class="players-div-para">O (P1)</p>
-					<p class="score">0</p>
+					<p class="score" id="circle-score">0</p>
 				</div>
 			</div>
 		</main>
-		<!-- <section>
-			<p class="player-win">PLAYER 1 WINS!</p>
-			<div class="round-r">
-				<img src="./assets/circle.svg" alt="circle-round">
-				<h2>TAKES THE ROUND</h2>
+		<section class="round-sect" id="round-sect">
+			<p class="player-win" id="player-win"></p>
+			<div class="round-r" id="round-r">
+				<img src="" alt="circle-round" id="pion-round" />
+				<h2 id="heading-two">TAKES THE ROUND</h2>
 			</div>
 			<div class="btns-round">
-				<button class="quit btn-truc">QUIT</button>
-				<button class="next-round btn-truc">NEXT ROUND</button>
+				<a href="./index.html"><button class="quit btn-truc">QUIT</button></a>
+				<button class="next-round btn-truc" id="next-round">NEXT ROUND</button>
 			</div>
-		</section> -->
+		</section>
+		<section class="round-sect" id="round-sect-tied">
+			<p class="player-win" id="player-win"></p>
+			<div class="round-r" id="round-r">
+				<h2 id="heading-two-tied">TAKES THE ROUND</h2>
+			</div>
+			<div class="btns-round">
+				<a href="./index.html"><button class="quit btn-truc">QUIT</button></a>
+				<button class="next-round btn-truc" id="next-round-tied">
+					NEXT ROUND
+				</button>
+			</div>
+		</section>
+		<section class="round-sect-back" id="round-sect-back">
+			<p class="player-win" id="player-win"></p>
+			<div class="round-r" id="round-r">
+				<h2 id="heading-two-back">TAKES THE ROUND</h2>
+			</div>
+			<div class="btns-round">
+				<button class="quit btn-truc-back" id="no-back">QUIT</button>
+				<button class="next-round btn-truc-back" id="yes-back">
+					NEXT ROUND
+				</button>
+			</div>
+		</section>
 		<script src="main.js"></script>
 	</body>
 </html>
