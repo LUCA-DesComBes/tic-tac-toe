@@ -1,44 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>tic-tac-toe</title>
-		<link rel="stylesheet" href="./style.css" />
-	</head>
-	<body>
-		<main>
-			<div class="f-r">
-				<img src="./assets/cross.svg" alt="cross" />
-				<img src="./assets/circle.svg" alt="circle" />
-			</div>
-			<section class="choose-player">
-				<h1>PICK PLAYER 1’S MARK</h1>
-				<div class="choose-div">
-					<button class="choose-div-pion" id="choose-div-pion-cross">
-						<img
-							src="./assets/cross-choose.svg"
-							alt="cross"
-							id="cross-choose-active"
-						/>
-					</button>
-					<button class="choose-div-pion" id="choose-div-pion-circle">
-						<img
-							src="./assets/circle-choose.svg"
-							alt="circle"
-							id="circle-choose-active"
-						/>
-					</button>
-				</div>
-				<p class="remember">REMEMBER : X GOES FIRST</p>
-			</section>
-			<section class="second-sect">
-				<button class="cpu-btn">NEW GAME (VS CPU)</button>
-				<a href="./start.html"
-					><button class="player-btn">NEW GAME (VS PLAYER)</button></a
-				>
-			</section>
-		</main>
-		<script src="./option.js"></script>
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>tic-tac-toe</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="truc" id="truc"></div>
+    <div class="menu-game" id="menu-game">
+      <div class="f-r-main">
+        <img src="./assets/cross.svg" alt="cross" />
+        <img src="./assets/circle.svg" alt="circle" />
+      </div>
+      <section class="choose-player">
+        <h1>PICK PLAYER 1’S MARK</h1>
+        <div class="choose-div">
+          <button class="choose-div-pion" id="choose-div-pion-cross">
+            <img
+              src="./assets/cross-choose.svg"
+              alt="cross"
+              id="cross-choose-active"
+            />
+          </button>
+          <button class="choose-div-pion" id="choose-div-pion-circle">
+            <img
+              src="./assets/circle-choose.svg"
+              alt="circle"
+              id="circle-choose-active"
+            />
+          </button>
+        </div>
+        <p class="remember">REMEMBER : X GOES FIRST</p>
+      </section>
+      <section class="second-sect">
+        <button class="cpu-btn">NEW GAME (VS CPU)</button>
+        <button class="player-btn" id="player-btn">NEW GAME (VS PLAYER)</button>
+      </section>
+    </div>
+    <div class="play-game">
+      <header>
+        <div class="f-r">
+          <img src="./assets/cross.svg" alt="cross" />
+          <img src="./assets/circle.svg" alt="circle" />
+        </div>
+        <div class="div-turn">
+          <img src="./assets/cross.svg" alt="cross-turn" id="cross-turn" />
+          <p class="div-turn-para">TURN</p>
+        </div>
+        <button class="back-btn" id="back-btn">
+          <img src="./assets/Redo.svg" alt="redo" />
+        </button>
+      </header>
+      <main>
+        <div class="container">
+          <button class="btn-pion"><img src="" alt="" id="pion" /></button>
+          <button class="btn-pion"><img src="" alt="" id="pion" /></button>
+          <button class="btn-pion"><img src="" alt="" id="pion" /></button>
+          <button class="btn-pion"><img src="" alt="" id="pion" /></button>
+          <button class="btn-pion"><img src="" alt="" id="pion" /></button>
+          <button class="btn-pion"><img src="" alt="" id="pion" /></button>
+          <button class="btn-pion"><img src="" alt="" id="pion" /></button>
+          <button class="btn-pion"><img src="" alt="" id="pion" /></button>
+          <button class="btn-pion"><img src="" alt="" id="pion" /></button>
+        </div>
+        <div class="players-row">
+          <div class="players-div blue">
+            <p class="players-div-para">X (P2)</p>
+            <p class="score" id="cross-score">0</p>
+          </div>
+          <div class="players-div gray">
+            <p class="players-div-para">TIES</p>
+            <p class="score" id="score-tied">0</p>
+          </div>
+          <div class="players-div orange">
+            <p class="players-div-para">O (P1)</p>
+            <p class="score" id="circle-score">0</p>
+          </div>
+        </div>
+      </main>
+    </div>
+    <section class="round-sect" id="round-sect">
+      <p class="player-win" id="player-win"></p>
+      <div class="round-r" id="round-r">
+        <img src="" alt="circle-round" id="pion-round" />
+        <h2 id="heading-two">TAKES THE ROUND</h2>
+      </div>
+      <div class="btns-round">
+        <button class="quit btn-truc" id="quit">QUIT</button>
+        <button class="next-round btn-truc" id="next-round">NEXT ROUND</button>
+      </div>
+    </section>
+    <section class="round-sect-tied" id="round-sect-tied">
+      <p class="player-win" id="player-win"></p>
+      <div class="round-r" id="round-r">
+        <h2 id="heading-two-tied">TAKES THE ROUND</h2>
+      </div>
+      <div class="btns-round">
+        <button class="quit btn-truc" id="quit">QUIT</button>
+        <button class="next-round btn-truc" id="next-round-tied">
+          NEXT ROUND
+        </button>
+      </div>
+    </section>
+    <section class="round-sect-back" id="round-sect-back">
+      <p class="player-win" id="player-win"></p>
+      <div class="round-r" id="round-r">
+        <h2 id="heading-two-back">TAKES THE ROUND</h2>
+      </div>
+      <div class="btns-round">
+        <button class="quit btn-truc-back" id="no-back"></button>
+        <button class="next-round btn-truc-back" id="yes-back"></button>
+      </div>
+    </section>
+    <script src="option.js"></script>
+    <script src="main.js"></script>
+  </body>
 </html>
