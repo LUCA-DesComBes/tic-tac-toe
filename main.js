@@ -79,12 +79,12 @@ for (let i = 0; i < btns.length; i++) {
     if (currentPlayer % 2 === 0) {
       pions.src = "./assets/cross.svg";
       pions.alt = CROSS_ALT;
-      crossTurn.src = "./assets/cross.svg";
+      crossTurn.src = "./assets/circle.svg";
       crossTurn.alt = "circle-turn";
     } else {
       pions.src = "./assets/circle.svg";
       pions.alt = CIRCLE_ALT;
-      crossTurn.src = "./assets/circle.svg";
+      crossTurn.src = "./assets/cross.svg";
       crossTurn.alt = "cross-turn";
     }
 
